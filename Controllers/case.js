@@ -98,13 +98,13 @@ exports.getCase = async (req, res) => {
 exports.getDetailsById = async (req, res) => {
     try {
         let pool = req.params.id;
-        let x = await Auction.findOne({ id: id }).lean();
+        let data = await Case.findOne({ _id: pool }).lean();
 
         //response
         return res.status(200).json({
             "isSuccess": true,
             "data": {
-                "arr": x
+                "arr": data
             },
             "message": messages["200"]
         });

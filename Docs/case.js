@@ -156,11 +156,11 @@
  *     summary: Get cases in out database for a network.
  *     parameters:
  *      - in: path
- *        name: pool
+ *        name: id
  *        schema:
  *          type: string
  *        required: true
- *        description: pool
+ *        description: id
  *     tags:
  *        - case
  *     responses:
