@@ -20,28 +20,25 @@ exports.caseCreated = async (req, res) => {
 
         //requesting data
         let { creatorAddress,
-            launchTokenContractAddress,
+            type,
             logoLink,
             networkType,
             coins,
-            transactionHash,
-            transactionResponse,
-            id
+            bucketName,
+            caseDescription
             
         } = req.body;
         let auction = new Case();
 
-
+        auction.type = type;
         auction.creatorAddress = creatorAddress;
-      
-        auction.launchTokenContractAddress = launchTokenContractAddress;
+        auction.caseDescription = caseDescription;
+        auction.bucketName = bucketName;
         auction.logoLink = logoLink;
         
         auction.networkType = networkType;
         auction.coins = coins;
-        auction.transactionHash = transactionHash;
-        auction.transactionResponse = transactionResponse;
-        auction.id = id;
+
         
         await auction.save()
 
