@@ -16,15 +16,16 @@ const { ObjectId } = mongoose.Schema;
 //Making Schema
 const CaseSchema = new mongoose.Schema({
 
+    bucketName: {
+        type: String,
+    },
+
     //contract address of creator
     creatorAddress: {
         type: String
     },
 
-    //contract address of our ERC-20 token
-    launchTokenContractAddress: {
-        type: String
-    },
+   
 
     //link to our logo image
     logoLink: {
@@ -51,6 +52,9 @@ const CaseSchema = new mongoose.Schema({
         default: "https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=018"
     },
 
+    type: {
+        type: String,
+    },
    
 
     coins : [
@@ -71,17 +75,7 @@ const CaseSchema = new mongoose.Schema({
 
     
 
-    //transaction hash of successfully auction created
-    transactionHash: {
-        type: String
-    },
-
-    //response object dump on creating the transaction
-    transactionResponse: {},
-
-    id: {
-        type: String
-    },
+    
 
     updatedTable: {
         type: ObjectId
