@@ -51,9 +51,6 @@
 
     http://localhost:8000/api/{endpoint}
 
-### Postman Collection
-
-- [Link for postman collection](https://www.getpostman.com/collections/40ff29f611e5d91bfec0)
 
 ### Swagger documentation
 
